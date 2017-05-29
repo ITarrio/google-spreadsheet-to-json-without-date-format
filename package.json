@@ -1,0 +1,22 @@
+{
+  "name": "google-spreadsheet-to-json-without-date-format",
+  "version": "1.0.0",
+  "description": "google-spreadsheet-to-json ==========================",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/cellsSpec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITarrio/google-spreadsheet-to-json-without-date-format.git"
+  },
+  "author": "ITARRIO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ITarrio/google-spreadsheet-to-json-without-date-format/issues"
+  },
+  "homepage": "https://github.com/ITarrio/google-spreadsheet-to-json-without-date-format#readme"
+}
