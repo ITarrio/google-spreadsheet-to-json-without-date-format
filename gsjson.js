@@ -20,7 +20,6 @@ program
     .option('-i, --vertical', 'Use the first column as header')
     .option('-l, --list-only', 'Just list the values in arrays')
     .option('-0, --include-header', 'Include header when using "list-only" option')
-    .option('-d, --disable-numeric', 'Disable google numeric format')
     .parse(process.argv);
 
 if (program.args.length < 1) {

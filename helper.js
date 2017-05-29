@@ -57,7 +57,6 @@ exports.cellsToJson = function(cells, options) {
     var colProp = options.vertical ? 'row' : 'col';
     var isHashed = options.hash && !options.listOnly;
     var includeHeaderAsValue = options.listOnly && options.includeHeader;
-    var numericValueEnabled = options.disableNumeric != true;
     var finalList = isHashed ? {} : [];
 
     // organizing (and ordering) the cells into arrays
@@ -113,7 +112,7 @@ exports.cellsToJson = function(cells, options) {
             if (!options.listOnly && !properties[colNumber])
                 return;
 
-            if (numericValueEnabled && typeof cell.numericValue !== 'undefined' && !(/^\d{1,2}-\d{1,2}-\d{4}$/.test(cell.value))) {
+            if (typeof cell.numericValue !== 'undefined' && !(/^\d{1,2}-\d{1,2}-\d{4}$/.test(cell.value))) {
                 val = parseFloat(cell.numericValue);
                 hasValues = true;
             } else if (cell.value === 'TRUE') {
