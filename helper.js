@@ -30,7 +30,7 @@ function handlePropertyName(cellValue, handleMode) {
 
     if (handleMode === 'nospace')
         return getWords(propertyName).join('');
-    
+
     return propertyName;
 }
 
@@ -49,7 +49,7 @@ function normalizeWorksheetIdentifiers(option) {
  * google spreadsheet cells into json
  */
 exports.cellsToJson = function(cells, options) {
-    
+
     // setting up some options, such as defining if the data is horizontal or vertical
     options = options || {};
 
@@ -112,7 +112,7 @@ exports.cellsToJson = function(cells, options) {
             if (!options.listOnly && !properties[colNumber])
                 return;
 
-            if (typeof cell.numericValue !== 'undefined' && !(/^\d{1,2}-\d{1,2}-\d{4}$/.test(cell.value))) {
+            if (typeof cell.numericValue !== 'undefined' && !(/^\d{1,2}-\d{1,2}-\d{4}$/.test(cell.value)) && !(/^\d{1,2}:\d{1,2}:\d{1,2}$/.test(cell.value))) {
                 val = parseFloat(cell.numericValue);
                 hasValues = true;
             } else if (cell.value === 'TRUE') {
