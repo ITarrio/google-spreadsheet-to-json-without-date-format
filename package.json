@@ -13,6 +13,20 @@
     "type": "git",
     "url": "git+https://github.com/ITarrio/google-spreadsheet-to-json-without-date-format.git"
   },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "commander": "^2.9.0",
+    "google-spreadsheet": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
+  },
+  "main": "index.js",
+  "bin": {
+    "gsjson": "gsjson.js"
+  },
   "author": "ITARRIO",
   "license": "ISC",
   "bugs": {
